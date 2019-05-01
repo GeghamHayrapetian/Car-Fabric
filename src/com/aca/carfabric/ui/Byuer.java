@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Byuer {
     String name;
-    Integer theFinalPrice;
     Scanner in=new Scanner(System.in);
     public Byuer(String name)
     {
