@@ -3,50 +3,50 @@ package com.aca.carfabric.car;
 import com.aca.carfabric.properties.*;
 import com.aca.carfabric.properties.map.Maps;
 
+
 public class Sedan extends Car {
 
-    Integer price ;
+    Integer price = 0;
     TypeOfSedan type;
-    @Override
+
     public Integer getPrice() {
         return price;
     }
-    public void chooseType(TypeOfSedan a)
-    {
-        type=a;
-        price+=Maps.sedanMap.get(a);
 
-    }
-    public void chooseMotor(Engine A) {
-        if(type.equals(TypeOfSedan.ELECTRIC))
-        {
-            motor=Engine.ELECTRICAL;
-            price+= Maps.sedanMap.get(TypeOfSedan.ELECTRIC);
-        }
-        motor=A;
-        price+= Maps.engineMap.get(A);
+
+    public void chooseMotor(Engine valueOf) {
+
+        motor = valueOf;
+        price += Maps.engineMap.get(valueOf);
 
     }
 
-    @Override
-    public void chooseWheels(Wheels B) {
-        wheel=B;
-        price+=Maps.wheelsMap.get(B);
+
+    public void chooseWheels(Wheels valueOf) {
+        wheel = valueOf;
+        price += Maps.wheelsMap.get(valueOf);
 
 
     }
 
-    @Override
-    public void chooseInterior(Interior C) {
-        interior=C;
-        price+=Maps.interiorMap.get(C);
+
+    public void chooseInterior(Interior valueOf) {
+        interior = valueOf;
+        price += Maps.interiorMap.get(valueOf);
 
     }
 
-    @Override
-    public void chooseExterior(Exterior D) {
-        exterior=D;
-        price+=Maps.exteriorMap.get(D);
+
+    public void chooseExterior(Exterior valueOf) {
+        exterior = valueOf;
+        price += Maps.exteriorMap.get(valueOf);
 
     }
+
+    public void chooseType(TypeOfSedan valueOf) {
+        type = valueOf;
+        price += Maps.sedanMap.get(valueOf);
+    }
+
+
 }

@@ -1,37 +1,44 @@
 package com.aca.carfabric.car;
 
-import com.aca.carfabric.properties.Engine;
-import com.aca.carfabric.properties.Exterior;
-import com.aca.carfabric.properties.Interior;
-import com.aca.carfabric.properties.Wheels;
+import com.aca.carfabric.properties.*;
 import com.aca.carfabric.properties.map.Maps;
 
+
 public class Motorcycle extends Car {
-    Integer price =2000;
-    public void chooseMotor(Engine A) {
-        motor=A;
-        price+= Maps.engineMap.get(A);
+    Integer price = 2000;
+
+    public Integer getPrice() {
+        return price;
     }
 
-    @Override
-    public void chooseWheels(Wheels B) {
-        wheel=B;
-        price+=Maps.wheelsMap.get(B);
 
+    public void chooseMotor(Engine valueOf) {
 
-    }
-
-    @Override
-    public void chooseInterior(Interior C) {
-        interior=C;
-        price+=Maps.interiorMap.get(C);
+        motor = valueOf;
+        price += Maps.engineMap.get(valueOf);
 
     }
 
-    @Override
-    public void chooseExterior(Exterior D) {
-        exterior=D;
-        price+=Maps.exteriorMap.get(D);
+
+    public void chooseWheels(Wheels valueOf) {
+        wheel = valueOf;
+        price += Maps.wheelsMap.get(valueOf);
+
 
     }
+
+
+    public void chooseInterior(Interior valueOf) {
+        interior = valueOf;
+        price += Maps.interiorMap.get(valueOf);
+
+    }
+
+
+    public void chooseExterior(Exterior valueOf) {
+        exterior = valueOf;
+        price += Maps.exteriorMap.get(valueOf);
+
+    }
+
 }

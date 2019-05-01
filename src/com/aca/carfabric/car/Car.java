@@ -17,41 +17,38 @@ public class Car {
         return price;
     }
 
-    public void chooseType(TypeOfSedan a) {
-        type = a;
-        price += Maps.sedanMap.get(a);
 
-    }
+    public void chooseMotor(Engine valueOf) {
 
-    public void chooseMotor(Engine A) {
-        if (type.equals(TypeOfSedan.ELECTRIC)) {
-            motor = Engine.ELECTRICAL;
-            price += Maps.sedanMap.get(TypeOfSedan.ELECTRIC);
-        }
-        motor = A;
-        price += Maps.engineMap.get(A);
+        motor = valueOf;
+        price += Maps.engineMap.get(valueOf);
 
     }
 
 
-    public void chooseWheels(Wheels B) {
-        wheel = B;
-        price += Maps.wheelsMap.get(B);
+    public void chooseWheels(Wheels valueOf) {
+        wheel = valueOf;
+        price += Maps.wheelsMap.get(valueOf);
 
 
     }
 
 
-    public void chooseInterior(Interior C) {
-        interior = C;
-        price += Maps.interiorMap.get(C);
+    public void chooseInterior(Interior valueOf) {
+        interior = valueOf;
+        price += Maps.interiorMap.get(valueOf);
 
     }
 
 
-    public void chooseExterior(Exterior D) {
-        exterior = D;
-        price += Maps.exteriorMap.get(D);
+    public void chooseExterior(Exterior valueOf) {
+        exterior = valueOf;
+        price += Maps.exteriorMap.get(valueOf);
 
+    }
+
+    public void chooseType(TypeOfSedan valueOf) {
+        type = valueOf;
+        price += Maps.sedanMap.get(valueOf);
     }
 }

@@ -13,7 +13,7 @@ public class Catalog {
 
     public static void showEngine() {
 
-        for (Engine  t : Engine.values()
+        for (Engine t : Engine.values()
         ) {
             System.out.println(t);
         }
@@ -27,27 +27,23 @@ public class Catalog {
         }
     }
 
-    public static void showInterior()
-
-    {
+    public static void showInterior() {
 
         for (Interior t : Interior.values()
         ) {
             System.out.println(t);
         }
     }
-    public static void  showTypesOfSedan()
 
-    {
+    public static void showTypesOfSedan() {
 
         for (TypeOfSedan t : TypeOfSedan.values()
         ) {
             System.out.println(t);
         }
     }
-    public static void  showWheels()
 
-    {
+    public static void showWheels() {
 
         for (Wheels t : Wheels.values()
         ) {
