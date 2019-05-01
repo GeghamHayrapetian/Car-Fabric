@@ -6,7 +6,7 @@ import com.aca.carfabric.properties.*;
 public class Seller {
 
     public Integer sellCar(Byuer byuer) {
-        System.out.println("Hi Mr. " + byuer+ " what type of car do u want to byu ? ");
+        System.out.println("Hi Mr. " + byuer.name+ " what type of car do u want to byu ? ");
         Catalog.showTypes();
         String s = byuer.toChoose();
         Car car = null;
@@ -28,6 +28,9 @@ public class Seller {
         }
         if (s.equals("TRACTOR")) {
             car = new Tractor();
+        }
+        if (s.equals("TRUCK")) {
+            car = new Truck();
         }
         System.out.println("Choose type of Engine");
         Catalog.showEngine();
