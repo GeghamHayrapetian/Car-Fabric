@@ -6,7 +6,7 @@ import com.aca.carfabric.properties.*;
 public class Seller {
 
     public Integer sellCar(Byuer byuer) {
-        System.out.println("Hi Mr. " + byuer.name+ " what type of car do u want to byu ? ");
+        System.out.println("Hi Mr. " + byuer+ " what type of car do u want to byu ? ");
         Catalog.showTypes();
         String s = byuer.toChoose();
         Car car = null;

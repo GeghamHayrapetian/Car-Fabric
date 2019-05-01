@@ -14,4 +14,9 @@ public class Byuer {
          String choice=in.nextLine().toUpperCase();
         return choice;
     }
+    public String toString ()
+    {
+        return name;
+
+    }
 }
