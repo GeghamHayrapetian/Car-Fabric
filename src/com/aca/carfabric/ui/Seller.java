@@ -9,7 +9,7 @@ public class Seller {
         System.out.println("Hi Mr. " + byuer+ " what type of car do u want to byu ? ");
         Catalog.showTypes();
         String s = byuer.toChoose();
-        Car car = null;
+        Car car=null;
         if (s.equals("CROSSOVER")) {
             car = new Crossover();
         }
@@ -48,7 +48,7 @@ public class Seller {
         Catalog.showWheels();
         String whe = byuer.toChoose();
         car.chooseWheels(Wheels.valueOf(whe));
-        System.out.println("You must puy" +car.getPrice());
+        System.out.println("You must puy " +car.getPrice());
         return car.getPrice();
 
     }
