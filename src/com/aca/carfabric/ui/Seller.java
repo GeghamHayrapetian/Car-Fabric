@@ -1,12 +1,12 @@
 package com.aca.carfabric.ui;
 
-import com.aca.carfabric.Car.*;
+import com.aca.carfabric.car.*;
 import com.aca.carfabric.properties.*;
 
 public class Seller {
 
     public Integer sellCar(Byuer byuer) {
-        System.out.println("Hi Mr. " + byuer + " what type of Car do u want to byu ? ");
+        System.out.println("Hi Mr. " + byuer+ " what type of car do u want to byu ? ");
         Catalog.showTypes();
         String s = byuer.toChoose();
         Car car = null;
@@ -22,8 +22,9 @@ public class Seller {
         if (s.equals("SEDAN")) {
             car = new Sedan();
             System.out.println("Choose type of sedan ");
+            Catalog.showTypesOfSedan();
             String type = byuer.toChoose();
-            ((Sedan) car).chooseType(TypeOfSedan.valueOf(type));
+            car.chooseType(TypeOfSedan.valueOf(type));
         }
         if (s.equals("TRACTOR")) {
             car = new Tractor();
@@ -44,6 +45,7 @@ public class Seller {
         Catalog.showWheels();
         String whe = byuer.toChoose();
         car.chooseWheels(Wheels.valueOf(whe));
+        System.out.println("You must puy" +car.getPrice());
         return car.getPrice();
 
     }
