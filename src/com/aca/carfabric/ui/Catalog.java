@@ -2,7 +2,7 @@ package com.aca.carfabric.ui;
 
 import com.aca.carfabric.properties.*;
 
-public class Catalog {
+public class Catalog  {
     public static void showTypes() {
 
         for (TypesOfCar t : TypesOfCar.values()

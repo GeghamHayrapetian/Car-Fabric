@@ -4,7 +4,7 @@ import com.aca.carfabric.properties.*;
 import com.aca.carfabric.properties.map.Maps;
 
 
-public class Car {
+ public abstract class  Car {
 
     protected Integer price;
     protected Engine motor;
